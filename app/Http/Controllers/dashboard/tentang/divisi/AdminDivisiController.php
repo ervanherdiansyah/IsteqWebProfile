@@ -4,7 +4,7 @@ namespace App\Http\Controllers\dashboard\tentang\divisi;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-Use Alert;
+use Alert;
 use App\ModelDivisi;
 use App\ModelTeam;
 use Illuminate\Support\Facades\Storage;
@@ -15,8 +15,8 @@ class AdminDivisiController extends Controller
     public function index()
     {
         $divisi = ModelDivisi::get();
-        $team = ModelTeam::get();
-        return view('dashboard.tentangisteq.divisi.divisi', compact('divisi','team'));
+        $team = ModelTeam::with('divisi')->get();
+        return view('dashboard.tentangisteq.divisi.divisi', compact('divisi', 'team'));
     }
     public function storedivisi(Request $request)
     {

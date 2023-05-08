@@ -12,10 +12,7 @@
         <div class="row gy-3">
           <div class="text-center foto-brosur">
             <!-- <h3>Voluptatem dignissimos provident quasi corporis</h3> -->
-            <a href="{{ asset('storage/' . $pendaftaran->gambar) }}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{asset('assets')}}/img/brosur-santri.jpg" class="img-fluid rounded-4 mb-4 foto-tokoh" alt=""></a>
-            <!-- <div class="text-center struktur-update">
-              <p class="fst-italic">Updated at <span>25 Januari 2023</span></p>
-            </div> -->
+            <a href="{{ asset('storage/' . $pendaftaran->gambar) }}" download target="_blank" ><img src="{{ asset('storage/' . $pendaftaran->gambar) }}" class="img-fluid rounded-4 mb-4 foto-tokoh" alt=""></a>
           </div>
         </div>
 
