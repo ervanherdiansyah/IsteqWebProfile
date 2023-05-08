@@ -15,7 +15,7 @@ class AdminDivisiController extends Controller
     public function index()
     {
         $divisi = ModelDivisi::get();
-        $team = ModelTeam::with('divisi')->get();
+        $team = ModelTeam::get();
         return view('dashboard.tentangisteq.divisi.divisi', compact('divisi', 'team'));
     }
     public function storedivisi(Request $request)
